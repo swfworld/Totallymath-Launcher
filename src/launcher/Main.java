@@ -47,8 +47,8 @@ public class Main {
 			DownloadAgent.downloadUsingStream(updateURL, "latest.zip");
 			DownloadAgent.downloadUsingNIO(updateURL, "latest.zip");
 			try {
-				ZipExtractor.unzip(dir+"latest.zip", dir);
-				File zip= new File(dir+"latest.zip");
+				ZipExtractor.unzip("latest.zip", dir);
+				File zip= new File("latest.zip");
 				return zip.delete();
 			}
 			catch(IOException e) {
@@ -90,7 +90,7 @@ public class Main {
 				update();
 			}
 			else {
-				
+				runcomand();
 			}
 		}
 	}
